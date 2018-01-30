@@ -3,6 +3,14 @@ function Foo() {
     this.name = "Foo";
 };
 
+Foo.prototype.calculateBar = function(a, b) {
+    if ( a < b) {
+        return a;
+    } else {
+        return 1;
+    }
+};
+
 Foo.prototype.calculateFoo = function(a, b) {
     if ( a < b) {
         return 2 * b - a;

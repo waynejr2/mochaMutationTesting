@@ -5,10 +5,56 @@ var assert = require('chai').assert;
 
 describe("testing Foo", function() {
     describe("functions are functions", function() {
+        it("calculateBar is a function", function() {
+            var f = new Foo();
+            
+            assert.typeOf(f.calculateBar, 'function');
+        });
         it("calculateFoo is a function", function() {
             var f = new Foo();
             
             assert.typeOf(f.calculateFoo, 'function');
+        });
+        it("calculateFoozle is a function", function() {
+            var f = new Foo();
+            
+            assert.typeOf(f.calculateFoozle, 'function');
+        });
+        it("getName is a function", function() {
+            var f = new Foo();
+            
+            assert.typeOf(f.getName, 'function');
+        });
+        it("setName is a function", function() {
+            var f = new Foo();
+            
+            assert.typeOf(f.setName, 'function');
+        });
+    });
+    describe('calculateBar test suite', function(){
+        it('if a < b', function() {
+            var f = new Foo();
+            
+            var actual = f.calculateBar(0, 2);
+            var expected = 0;
+            
+            expect(actual).to.be.equal(expected);            
+        });
+        it('if a > b', function() {
+            var f = new Foo();
+            
+            var actual = f.calculateBar(2, 0);
+            var expected = 1;
+            
+            expect(actual).to.be.equal(expected);            
+        });
+        it('if a = b', function() {
+            var f = new Foo();
+            
+            var actual = f.calculateBar(2, 2);
+            var expected = 1;
+            
+            expect(actual).to.be.equal(expected);            
         });
     });
     describe('calculateFoo test suite', function() {

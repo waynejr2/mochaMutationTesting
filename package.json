@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --recursive spec",
-    "testw": "nyc mocha --recursive spec"
+    "coverage": "nyc mocha --recursive spec",
+    "mutate": "stryker run"
   },
   "author": "Wayne J Rasmussen",
   "license": "MIT",
